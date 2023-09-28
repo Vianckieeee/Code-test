@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Slice Prac</title>
+  <script>
+   // Question 1: Given a sentence as a string, write JavaScript code to extract the last word from the sentence using the `slice` method.
+
+   const sentence = "This is a sample sentence to demonstrate the exercise.";
+
+   // Your code here
+   console.log(sentence.length);
+   console.log(sentence.slice(45,53));
+
+   console.log("==================")
+   // Question 2: Given the string "JavaScript", write JavaScript code to extract the substring "Script" using the slice method.
+    let word = "Javascript";
+   // Your code here
+   console.log(word.length);
+   let newWord = word.slice(4);
+   console.log(newWord);
+
+   console.log("==================")
+   // Question: You have an array called originalArray. Write JavaScript code to create a copy of this array using the slice method.
+  
+    const originalArray = [3, 6, 9, 12, 15];
+
+    // Your code here
+    let copyArray= originalArray.slice(0);
+    console.log(copyArray);
+
+    console.log("==================")
+    // Question: You have an array called numbers. Write JavaScript code to extract the elements [20, 30, 40] from this array using the slice method.
+
+    const numbers = [10, 20, 30, 40, 50, 60];
+
+    // Your code here
+
+    let number = numbers.slice(1,4);
+    console.log(number);
+
+    console.log("==================")
+    // Question: You have an array called `fruits` with various fruits. Write JavaScript code to truncate the array so that it only contains the first 3 fruits using the `slice` method.
+
+    const fruits = ["apple", "banana", "cherry", "date", "fig"];
+
+    // Your code here
+    let fruit = fruits.slice(0,3)
+    console.log(fruit);
+
+    console.log("==================")
+    // Question: Given a sentence as a string, write JavaScript code to extract the last word from the sentence using the `slice` method.
+
+    const sent = "This is a sample sentence to demonstrate the exercise.";
+
+    // Your code here
+    console.log(sent.length);
+    let exsent = sent.slice(45,53);
+    console.log(exsent);
+    /* Answer by chat gpt need ko to ianalyze:
+      const sentence = "This is a sample sentence to demonstrate the exercise.";
+      const words = sentence.split(" ");
+      const lastWord = words[words.length - 1];
+      console.log(lastWord); // Output: "exercise."
+    */
+
+    console.log("==================")
+    // Question: You have an array of numbers called `data`. Write JavaScript code to extract a subarray that contains the numbers from index 2 to index 5 using the `slice` method.
+
+    const data = [10, 20, 30, 40, 50, 60, 70, 80];
+
+    // Your code here
+    let exdata = data.slice(2,6)
+    console.log(exdata);
+
+
+
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

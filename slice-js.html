@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Slice</title>
+  <script>
+    /*
+      Certainly! The "slice" method is like a tool for making a copy of part of an array. It doesn't change the original array. You can use it in different ways:
+      1. If you give it one positive number, it copies everything from that number to the end of the array.
+      2. If you give it two positive numbers, it copies everything from the first number up to, but not including, the second number.
+      3. If you give it one positive and one negative number, it starts from the positive number and copies everything except the last few specified by the negative number.
+      4. If you give it one negative number, it copies the specified number of elements from the end of the array.
+      Think of it like slicing a cake – you can slice it into different portions based on your preferences, but the original cake remains unchanged.
+    */
+
+    let numbers = [1,2,3,4,5,6,7,8,9,10]
+
+    let n1 = numbers.slice(0);//test
+    console.log(n1);
+
+
+    let n2 = numbers.slice(1);//1. Positive number, so nag start tayo sa index 1, which is 2 so that means ma ka copy nya ung 2 hanggang dulo dahil ito ay positive number, ang output ay [2, 3, 4, 5, 6, 7, 8, 9, 10]
+    console.log(n2);//[2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+    let n3 = numbers.slice(1,5)//2. this will show 2,3,4,5, kasi pag dalawang positive number, the first number is kasama na ung bilang sa index and then ung  second number eh kung san index tumapat hindi iyon isasama, 
+    // n3 = numbers.slice(1,5), index 1 = 2, and index = 6,
+    console.log(n3);//[2, 3, 4, 5]
+
+    let n4 = numbers.slice(4,-2)//3. So starting from index 4 which is 5-8, dahil ung -2 is equal sa 10 in index -1 and 9 which is -2 kaya d sila kasali
+    console.log(n4);//this will show 5,6,7,8,
+    
+    let n5 = numbers.slice(-5);//4. So dito -5, so bibilang tayo starting from 10 which is -1 hanggang makarating sa -5 which is 6, den ung 6-10 ang ano
+    console.log(n5);// this will show 6-10
+  
+  </script>
+</head>
+<body>
+  
+</body>
+</html>
