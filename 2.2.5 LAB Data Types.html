@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2.2.5 Lab Data Types</title>
+  <script>
+    /*
+    
+    */
+    let users = [
+    { name: "Maxwell Wright", phone: "(0191) 719 6495", email: "Curabitur.egestas.nunc@nonummyac.co.uk" },
+    { name: "Raja Villarreal", phone: "0866 398 2895", email: "posuere.vulputate@sed.com" },
+    { name: "Helen Richards", phone: "0800 1111", email: "libero@convallis.edu" }
+    ];
+    console.log(users);
+
+    let newuser = 
+    {
+        name:"Maisie Haley",
+        phone:"0913 531 3030",
+        email:"risus.Quisque@urna.ca."
+    };
+    
+    users.push(newuser);
+    console.log(users[0].name);
+    console.log(users[1]);
+    let firstcontact =users.slice(0,1);
+    console.log(firstcontact);
+    let lastcontact = users.slice(-1);
+    console.log(lastcontact);
+  </script>
+</head>
+<body>
+  
+</body>
+</html>
