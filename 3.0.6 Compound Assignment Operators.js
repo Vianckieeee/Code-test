@@ -27,3 +27,21 @@
     //Exponentiation - Raises the left operand to the power of the right operand and assigns the result to the left operand. (Introduced in ECMAScript 2016)
     let b = 2;
     b **= 3; // Equivalent to b = b ** 3; // b is now 8
+    
+    console.log("===================")
+
+    let c = 10;
+ 
+    c += 2;
+    console.log(c); // -> 12
+    c -= 4;
+    console.log(c); // -> 8
+    c *= 3;
+    console.log(c); // -> 24
+    c /= 6;
+    console.log(c); // -> 4
+    c **= 3;
+    console.log(c); // -> 64
+    c %= 10;
+    console.log(c); // -> 4
+
