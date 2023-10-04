@@ -33,3 +33,8 @@
 
   let isLight = !isDark;
   console.log(isLight); // This will print false because it negates the value of isDark.
+
+/*
+    The highest priority is negation !, then conjunction &&, and finally the alternative ||. 
+    The precedence can of course be changed by means of parentheses.
+  */ 
