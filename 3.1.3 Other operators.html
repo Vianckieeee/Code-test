@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    /*
+    typeof
+    We already introduced the typeof operator when discussing data types. It is a unary operator, which checks the type of operand (it can be a variable or a literal). 
+    */ 
+    let year = 10191;
+    console.log(typeof year); // -> number
+    console.log(typeof false); // -> boolean
+
+    /*
+    instanceof
+    The instanceof operator appeared while discussing arrays. It is a binary operator that checks whether an object (left operand) is of some type (right operand). 
+
+    */ 
+    console.log("++++++++++++++++++++");
+    let names = ["Patti", "Bob"];
+    let name = names[0];
+    console.log(names instanceof Array); // -> true
+    console.log(name instanceof Array); // -> false
+
+    /*
+    delete
+    The unary delete operator was introduced while discussing objects.
+    */ 
+    console.log("++++++++++++++++++++");
+    let user = {
+      name: "Alice",
+      age: 38
+    };
+    console.log(user.age); // -> 38
+    delete user.age;
+    console.log(user.age); // -> undefined
+
+    /*
+    Ternary
+    The last of the operators discussed is quite unusual, because it is the only operator using three operands. It is a conditional operator.
+    */ 
+    console.log("++++++++++++++++++++");
+    console.log(true ? "Alice" : "Bob"); // -> Alice
+    /*
+    console.log(true ? "Alice" : "Bob");
+    - The condition in this case is true.
+    - Since the condition is true, the expression after the ? (which is "Alice") is evaluated and returned.
+    - So, this code prints "Alice" to the console.
+    */ 
+
+    console.log(false ? "Alice" : "Bob"); // -> Bob
+    /*
+    console.log(false ? "Alice" : "Bob");
+    The condition in this case is false.
+    Since the condition is false, the expression after the : (which is "Bob") is evaluated and returned.
+    So, this code prints "Bob" to the console.
+    */ 
+
+    /*
+    In summary, the conditional (ternary) operator evaluates the condition, and if the condition is true, it returns the expression after the ?, and if the condition is false, it returns the expression after the :. 
+    */ 
+
+    let namesss = 1 > 2 ? "Alice" : "Bob";
+    console.log(namesss); // -> Bob
+    /*
+    1. 1 > 2 is the condition that is being tested. This condition checks if 1 is greater than 2. Since 1 is not greater than 2, this condition evaluates to false.
+    2.The conditional operator, ?, is used to specify two possible values:
+      -The value to the left of ?, which is "Alice", is the value that will be assigned to the name variable if the condition is true.
+      - The value to the right of ?, which is "Bob", is the value that will be assigned to the name variable if the condition is false.
+    3. Since the condition 1 > 2 is false, the expression after :, which is "Bob", is evaluated and assigned to the name variable.
+    4. Finally, the console.log(name); statement prints the value of the name variable to the console, which is "Bob" in this case because the condition was false.
+    
+    */ 
+
+
+
+
+
+
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

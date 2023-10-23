@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    /*
+      3.1.2 Comparison operators
+  Comparison operators are used to check the equality or inequality of values. All comparison operators are binary, 
+  and all of them return a logical value representing the result of the comparison, true or false.
+  There are two exceptions to this, strings and the identity (strict equality) operator. 
+  Strings are compared char by char (precisely Unicode character by Unicode character using their values).
+  
+  To check if the operands are equal, 
+  we can use either the identity (strict equality) operator === or the equality operator ==.
+  The first is more restrictive, and in order to return true, the operands must be identical (i.e. they must be equal and of the same type).
+    */ 
+    console.log(10 === 5); // -> false // kasi same type sya which is int pero not same value
+    console.log(10 === 10); // -> true 
+    console.log(10 === 10n); // -> false // not same type and same value
+    console.log(10 === "10"); // -> false // not same type
+    console.log("10" === "10"); // -> true
+    console.log("Alice" === "Bob"); // -> false // same type but not same value
+    console.log(0 === false); // -> false 
+    console.log(undefined === false); // -> false
+
+    /*
+      The equality operator requires that they are only equal, and their types are not compared. 
+      So if the operands are of different types, the interpreter will try to convert them to numbers, for example, false will convert to 0, true to 1, undefined to NaN, null to 0, 10n to 10 and "123" to 123, etc.
+    */ 
+    console.log("++++++++++++++++++");
+
+    console.log(10 == 5); // -> false
+    // Here, you are comparing the number 10 to the number 5. Since they are not equal, the result is false.
+
+    console.log(10 == 10); // -> true
+    // In this line, you are comparing the number 10 to itself. They are equal, so the result is true.
+
+    console.log(10 == 10n); // -> true
+    //This line compares the number 10 to the BigInt 10n. The == operator performs type coercion, so it converts the BigInt to a number and then compares. In this case, the values are the same, so it returns true.
+
+    console.log(10 == "10"); // -> true
+    // Here, you are comparing the number 10 to the string "10". The == operator performs type coercion, converting the string to a number and then comparing. In this case, the values are the same, so it returns true.
+
+    console.log("10" == "10"); // -> true
+    // This line compares two strings, "10" and "10". Since the strings have the same content, the result is true.
+
+    console.log("Alice" == "Bob"); // -> false
+    // In this line, you are comparing two different strings, "Alice" and "Bob". They are not equal, so the result is false.
+
+    console.log(0 == false); // -> true
+    // This comparison checks if the number 0 is equal to the boolean value false. JavaScript performs type coercion, and in this case, both are considered falsy values, so they are considered equal. Thus, the result is true.
+
+    console.log(undefined == false); // -> false
+    //This comparison checks if the undefined value is equal to the boolean value false. They are not the same type, and undefined is not considered a falsy value, so the result is false.
+
+    console.log(NaN == NaN); // -> false
+    //here, you are comparing two special values, NaN (Not-a-Number). Interestingly, NaN is not considered equal to any other value, including itself. So, the result is false.
+
+    /*
+    It's important to note that the == operator in JavaScript performs type coercion, which can lead to unexpected behavior in some cases. 
+    For stricter equality checks that do not perform type coercion, you should use the === operator.
+    */ 
+
+    /*
+      There are also complementary operators to those just demonstrated – the nonidentity operator !== and the inequality operator !=. 
+      The first returns true if the operands are not identical, in other words, they are equal but of different types, or they are simply different. 
+      The second returns true if the operands are different.
+    */ 
+    // Using !== operator (strict inequality):
+    console.log("++++++++++++++++++");
+    console.log(10 !== 5); // -> true
+    // This line checks if the number 10 is not equal to the number 5, and indeed, they are not equal, so the result is true.
+
+    console.log(10 !== 10); // -> false
+    // Here, you are checking if the number 10 is not equal to itself. Since they are equal, the result is false.
+
+    console.log(10 !== 10n); // -> true
+    // This line checks if the number 10 is not strictly equal to the BigInt 10n. Since !== performs strict comparison without type coercion, they are considered different types, so the result is true.
+
+    console.log(10 !== "10"); // -> true
+    // In this case, you are checking if the number 10 is not strictly equal to the string "10". The types are different, and strict inequality is enforced, so the result is true.
+
+    console.log("10" !== "10"); // -> false
+    // This line compares two strings, "10" and "10", using the !== operator. They have the same content, so the result is false.
+
+    console.log("Alice" !== "Bob"); // -> true
+    //Here, you are comparing two different strings, "Alice" and "Bob," and they are not equal, so the result is true.
+
+    console.log(0 !== false); // -> true
+    //This comparison checks if the number 0 is not strictly equal to the boolean value false, which is true because they are different types.
+
+    console.log(undefined !== false); // -> true
+    //his line checks if the undefined value is not strictly equal to the boolean value false. Since they are different types, the result is true.
+
+    //Using != operator (non-strict inequality):
+
+    console.log(10 != 5); // -> true
+    //The != operator performs non-strict inequality checks and converts values if necessary. In this case, the number 10 is not equal to the number 5, so the result is true.
+
+    console.log(10 != 10); // -> false
+    //This line uses the != operator to check if the number 10 is not equal to itself. Since they are equal, the result is false.
+
+    console.log(10 != 10n); // -> false
+    //The != operator performs type coercion and converts the BigInt 10n to a number before comparison. The values are the same, so the result is false.
+
+    console.log(10 != "10"); // -> false
+    //This line uses the != operator to compare the number 10 to the string "10." Type coercion converts the string to a number, and they are the same, so the result is false.
+
+    console.log("10" != "10"); // -> false
+    //Comparing two equal strings using the != operator results in false because they have the same content.
+
+    console.log("Alice" != "Bob"); // -> true
+    // When comparing different strings using !=, it checks whether they are not equal, which is the case here, so the result is true.
+
+    console.log(0 !=  false); // -> false
+    // The != operator performs type coercion, and in this case, both 0 and false are considered falsy values and, therefore, equal. So, the result is false.
+
+    console.log(undefined != false); // -> true
+    // This line uses the != operator to check if undefined is not equal to false. Since they are different types, the result is true.
+
+    console.log(NaN != NaN); // -> true
+    //The != operator compares two NaN values, and in JavaScript, NaN is not equal to anything, including itself. So, the result is true.
+
+    /*
+      We also have operators that allow us to check if one of the operands is bigger than >, smaller than <, bigger than or equal to >=, and smaller than or equal to <=. 
+      These operators work on any type of operand, but it makes sense to use them only on numbers or values that will convert correctly to numbers.
+    */ 
+    console.log("++++++++++++++++++++");
+    console.log(10 > 100); // -> false
+    // This line checks if the number 10 is greater than the number 100, which is false. So, the result is false.
+
+    console.log(101 > 100); // -> true
+    // In this case, you are comparing the number 101 to the number 100, and 101 is indeed greater, so the result is true.
+
+    console.log(101 > "100"); // -> true
+    // This comparison involves a number 101 and a string "100." JavaScript performs type coercion, converting the string to a number, and 101 is still greater than 100. So, the result is true.
+    
+    console.log(101 < 100); // -> false
+    // Here, you are checking if the number 101 is less than the number 100, which is false. So, the result is false.
+
+    console.log(100n < 102); // -> true
+    // This comparison involves a BigInt 100n and a regular number 102. BigInts can represent larger values, and in this case, 100n is indeed less than 102, so the result is true.
+
+    console.log("10" < 20n); // -> true
+    // You are comparing a string "10" to a BigInt 20n. JavaScript performs type coercion, converting the string to a number. Since 10 is less than 20, the result is true.
+    
+    console.log(101 <= 100); // -> false
+    // This line checks if the number 101 is less than or equal to the number 100, but it's not. So, the result is false.
+
+    console.log(10 >= 10n); // -> true
+    // Here, you are checking if the number 10 is greater than or equal to the BigInt 10n. BigInts and regular numbers can be compared using these operators, and in this case, 10 is indeed greater than or equal to 10n, so the result is true.
+
+    console.log("10" <=  20); // -> true
+    // This comparison involves a string "10" and the number 20. JavaScript performs type coercion, converting the string to a number. Since 10 is less than or equal to 20, the result is true.
+    
+    /*
+      You can also use them to compare strings that do not represent numbers, but the algorithm of this comparison is quite complex, and the comparison itself is not very useful. 
+      It is assumed that the values of the single characters correspond to their positions in the alphabet (the letter b has a higher value than the letter a). 
+      Upper-case letters have lower values than lower-case letters, and digits have even lower values.
+
+    */ 
+    console.log("b" > "a"); // -> true
+    console.log("a" > "B"); // -> true
+    console.log("B" > "A"); // -> true
+    console.log("A" > "4"); // -> true
+    console.log("4" > "1"); // -> true
+    
+    console.log("ab1" < "ab4"); // -> true
+    console.log("ab4" < "abA"); // -> true
+    console.log("abB" < "aba"); // -> true
+    console.log("aba" < "abb"); // -> true
+    
+    console.log("ab" < "ab4"); // -> true
+    
+
+
+  </script>
+</head>
+<body>
+  
+</body>
+</html>
