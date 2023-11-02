@@ -1,4 +1,4 @@
- /*
+/*
     1. Even or Odd Number: 
     Write a program that takes an integer as input and prints whether its even or odd
     */ 
@@ -42,3 +42,19 @@
   3. Largest of Three Numbers:
   Write a program that takes three numbers as input and finds and prints the largest of the three.
   */ 
+    let n1 = parseInt(prompt("Enter the first number:"));
+    let n2 = parseInt(prompt("Enter second number:"));
+    let n3 = parseInt(prompt("Enter third number:"));
+    if (n1 >= n2 && n1 >= n3){
+      console.log(n1 + " is the highest number among 3 numbers");
+    } else if (n2 >= n1 && n2 >= n3){
+      console.log(n2 + "is the highest number among 3 numbers");
+    } else if (n3 >= n1 && n3 >= n2){
+      console.log(n3 +" is the highest number among 3 numbers");
+    }
+
+    /*
+    4. leap year checker:
+    Create a program that checks if a given year is a leap year or not. 
+    Leap years are divisible by 4, but not by 100, unless they are divisible by 400.
+    */ 
