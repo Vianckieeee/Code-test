@@ -53,8 +53,30 @@
       console.log(n3 +" is the highest number among 3 numbers");
     }
 
+   console.log("++++++++++++++++++++");
     /*
     4. leap year checker:
     Create a program that checks if a given year is a leap year or not. 
     Leap years are divisible by 4, but not by 100, unless they are divisible by 400.
+    */ 
+    // Get input from the user
+    let year = parseInt(prompt("Enter a year:"));
+
+    // Check if it's a leap year
+    if ((year % 4 === 0 && year % 100 !== 0) || year % 400 === 0) {
+      console.log(year + " is a leap year.");
+    } else {
+      console.log(year + " is not a leap year.");
+    }
+    /*
+    The condition within the if statement uses a logical expression to check whether the year is a leap year. 
+    It consists of two parts separated by || (logical OR):
+    -The first part (year % 4 === 0 && year % 100 !== 0) checks if the year is divisible by 4 but not divisible by 100. 
+    This part handles the general rule for leap years.
+
+    - The second part year % 400 === 0 checks if the year is divisible by 400. 
+    Leap years that are divisible by 100 are still leap years if they are divisible by 400 (e.g., the year 2000).
+
+    If either part of the condition is true (i.e., the year is divisible by 4 and not by 100, or it's divisible by 400), the code inside the first set of curly braces is executed. 
+    This code logs a message indicating that the year is a leap year.
     */ 
