@@ -244,3 +244,193 @@
 
   3.Then, we proceed to check if the number is positive, negative, or zero and provide the appropriate classification based on the value of the input.
   */ 
+
+  console.log("++++++++++++++++++++");
+  /*
+  11. Time of Day Greeting
+  Write a program that displays a greeting message based on the time of day. For example, "Good morning" in the morning, "Good afternoon" in the afternoon, and "Good evening" in the evening.
+  */ 
+    let timeofday = prompt("Choose beetween: morning, afternoon, or evening").toLowerCase();
+  if (timeofday === "morning"){
+      alert("Hi, Goodmorning!");
+  } else if (timeofday === "afternoon"){
+      alert("Hi, Good Afternoon!");
+  } else {
+      alert("Hi, Good Evening!");
+  }
+  /*
+  Chat Gpt's Code:
+      // Get the current date and time
+    const currentTime = new Date();
+    const currentHour = currentTime.getHours();
+
+    // Define the greeting based on the time of day
+    let greeting;
+
+    if (currentHour >= 5 && currentHour < 12) {
+      greeting = "Good morning";
+    } else if (currentHour >= 12 && currentHour < 18) {
+      greeting = "Good afternoon";
+    } else {
+      greeting = "Good evening";
+    }
+
+    // Display the greeting message
+    console.log(greeting);
+  */ 
+  /*
+  1.We create a Date object to get the current date and time.
+  2. We extract the current hour using the getHours() method of the Date object.
+  3. We use if statements to determine the time of day and set the greeting variable accordingly.
+  4. The if statements check if the currentHour falls within the morning (between 5 and 11), afternoon (between 12 and 17), or evening (after 17).
+  5.Finally, we display the greeting message using console.log().
+  */ 
+  
+  console.log("++++++++++++++++++++");
+  /*
+  12. Ticket Price Calculator:
+  - Build a JavaScript program that calculates the price of a movie ticket based on the age of the customer. Children (under 12) get a discount, and seniors (over 65) also get a discount.
+  */  
+  let childAge = 13;
+  let srAge = 64;
+  let nPriceticket = 20;
+  let cDiscount = 5;
+  let srDiscount = 10;
+  
+  if (childAge <= 12){
+    nPriceticket-=cDiscount;
+  } else if (srAge >= 65){
+    nPriceticket-=srDiscount;
+  } else {
+    nPriceticket;
+  }
+
+  console.log(" The Ticket will be: " + nPriceticket);
+  /*
+  chat gpt's code:
+    // Age of the customer (replace with the actual age)
+  let customerAge = 40;
+
+  // Base ticket price
+  let baseTicketPrice = 20;
+
+  // Discount for children and seniors
+  let childDiscount = 5;
+  let seniorDiscount = 10;
+
+  // Initialize the final ticket price
+  let finalTicketPrice = baseTicketPrice;
+
+  // Check for age-based discounts
+  if (customerAge < 12) {
+    finalTicketPrice -= childDiscount; // Apply child discount
+  } else if (customerAge >= 65) {
+    finalTicketPrice -= seniorDiscount; // Apply senior discount
+  }
+
+  // Display the final ticket price
+  console.log("Ticket Price: $" + finalTicketPrice);
+  */ 
+
+  console.log("++++++++++++++++++++");
+  /*
+  13.Discount Applicator:
+  - Create a program that calculates the final price of a product based on the original price and a discount percentage. If the discount is 10% or more, 
+  apply the discount; otherwise, no discount is applied.
+  */ 
+  // Chat gpt's code:
+    // Original price of the product
+  let originalPrice = 100; // Replace with the actual original price
+
+  // Discount percentage
+  let discountPercentage = 15; // Replace with the actual discount percentage
+
+  // Calculate the final price
+  if (discountPercentage >= 10) {
+    // Apply the discount
+    let discountAmount = (discountPercentage / 100) * originalPrice;
+    let finalPrice = originalPrice - discountAmount;
+    console.log("Final Price with " + discountPercentage + "% discount: $" + finalPrice);
+  } else {
+    // No discount applied
+    console.log("No discount applied. Final Price: $" + originalPrice);
+  }
+
+  console.log("++++++++++++++++++++");
+  /*
+  14.Tax Calculator:
+  - Write a JavaScript program that calculates the tax amount for a purchase based on the purchase amount and a tax rate.
+  Display the total cost, including tax.
+  */ 
+  //Chat Gpt's code:
+  // Purchase amount
+  let purchaseAmount = 100; // Replace with the actual purchase amount
+
+  // Tax rate (in percentage)
+  let taxRate = 8; // Replace with the actual tax rate
+
+  // Calculate the tax amount
+  let taxAmount = (taxRate / 100) * purchaseAmount;
+
+  // Calculate the total cost, including tax
+  let totalCost = purchaseAmount + taxAmount;
+
+  // Display the results
+  console.log("Purchase Amount: $" + purchaseAmount);
+  console.log("Tax Rate: " + taxRate + "%");
+  console.log("Tax Amount: $" + taxAmount.toFixed(2)); // Display tax amount with 2 decimal places
+  console.log("Total Cost (including tax): $" + totalCost.toFixed(2)); // Display total cost with 2 decimal places
+/*
+We use console.log to display the purchase amount, tax rate, tax amount, and the total cost, 
+making sure to format them with two decimal places using toFixed(2) for better readability.
+*/ 
+
+console.log("++++++++++++++++++++");
+  /*
+  15. Season Identifier:
+  Implement a program that identifies the season (spring, summer, fall, or winter) 
+  based on the current month and displays a message for that season.
+  */ 
+  // chat gpt's code:
+  // Get the current date
+  const currentDate = new Date();
+
+  // Get the current month (0-11, where 0 is January and 11 is December)
+  const currentMonth = currentDate.getMonth();
+
+  // Define an array of seasons
+  const seasons = ['Winter', 'Spring', 'Summer', 'Fall'];
+
+  // Determine the season based on the current month
+  let season;
+  if (currentMonth >= 2 && currentMonth <= 4) {
+    season = seasons[1]; // Spring (March, April, May)
+  } else if (currentMonth >= 5 && currentMonth <= 7) {
+    season = seasons[2]; // Summer (June, July, August)
+  } else if (currentMonth >= 8 && currentMonth <= 10) {
+    season = seasons[3]; // Fall (September, October, November)
+  } else {
+    season = seasons[0]; // Winter (December, January, February)
+  }
+
+  // Display the message for the current season
+  console.log(`The current season is ${season}.`);
+
+  /*
+  16. BMI Category:
+  Create a program that calculates the Body Mass Index (BMI) of a person and categorizes 
+  them as underweight, normal weight, overweight, or obese based on BMI ranges.
+  */ 
+  let kilo = parseInt(prompt("Enter your weight on kg:"));
+  let height = parseFloat(prompt("Enter your height in centimeters:"));
+
+  let bmi = (kilo / (height ** 2)) * 10000;
+  if (bmi <= 18.5){
+    console.log(" Your be BMI is:" + bmi.toFixed(1) + "you are Underweight");
+  } else if (bmi <= 24.9){
+    console.log(" Your be BMI is:" + bmi.toFixed(1) + "you are normal");
+  } else if (bmi <= 29.9){
+    console.log(" Your be BMI is:" + bmi.toFixed(1) + "you are overweight");
+  } else if (bmi >= 30){
+    console.log(" Your be BMI is:" + bmi.toFixed(1) + "you are obese");
+  }
