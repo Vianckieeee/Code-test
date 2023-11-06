@@ -416,6 +416,7 @@ console.log("++++++++++++++++++++");
   // Display the message for the current season
   console.log(`The current season is ${season}.`);
 
+  console.log("++++++++++++++++++++");
   /*
   16. BMI Category:
   Create a program that calculates the Body Mass Index (BMI) of a person and categorizes 
@@ -433,4 +434,21 @@ console.log("++++++++++++++++++++");
     console.log(" Your be BMI is:" + bmi.toFixed(1) + "you are overweight");
   } else if (bmi >= 30){
     console.log(" Your be BMI is:" + bmi.toFixed(1) + "you are obese");
+  }
+  
+  console.log("++++++++++++++++++++");
+  /*
+  17. Number Comparison:
+  Write a program that takes two numbers as input and determines whether they are 
+  equal, and if not, which one is greater. Display appropriate message based on the comparison.
+  */ 
+  let firstNumber = parseInt(prompt("Enter the first number:"));
+  let secondNumber = parseInt(prompt("Enter the second number:"));
+
+  if (firstNumber > secondNumber){
+      console.log("The first number is " + firstNumber + " and is greater than second number which is:" + secondNumber);
+  } else if (secondNumber > firstNumber){
+      console.log("The second number is " + secondNumber + " and is greater than first  number which is:" + firstNumber);
+  } else  {
+      console.log(" The first " + firstNumber + " and the second number" + secondNumber + " are equal.");
   }
