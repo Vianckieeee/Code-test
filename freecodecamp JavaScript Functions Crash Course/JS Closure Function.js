@@ -26,6 +26,14 @@ inner function called innerFunction
 4. When we later call closure(), it still has access to the outerVariable
  even though outerFunction has finished executing. This is possible because innerFunction forms a closure, 
  "capturing" the lexical environment in which it was created.
-
- 
 */ 
+
+function outerFunction(outerVariable){
+    return function innerFunction(innerVariable){
+        console.log('Outer Variable ' + outerVariable)
+        console.log('Inner Variable ' + innerVariable)
+    }
+}
+
+const newFunction = outerFunction('Vien')
+newFunction('Uy')
